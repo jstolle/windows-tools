@@ -17,7 +17,7 @@ Else
             $inurl = "http://$arg"
         }
 
-        $ie = @($win.windows() | ? { $_.Name -eq 'Windows Internet Explorer' -and $_.LocationName -NotMatch 'Do Not Close' })
+        $ie = @($win.windows() | ? { $_.Name -eq 'Windows Internet Explorer' -and $_.LocationName -NotMatch 'Do Not Close' -and $_.LocationName -NotMatch 'Support Incident' })
 
         If ($ie.length -eq 0)
         {
